@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+#main
+{
+    background-color: rgb(37, 133, 224);
+    display:flex;
+    justify-content:center;
+    gap: 100px;
+    height:100vh;
+
+}
+
+.card{
+    background-color: aliceblue;
+    max-height:fit-content;
+    padding: 20px;
+    border-radius:  10px;
+    display:grid;
+    gap: 20px;
+}
+
+.form-field{
+display:flex;
+gap: 5px;
+align-items:center;
+border-bottom:1px solid grey;
+
+}
+
+.form-field input{
+    border:none;
+    background-color:transparent;
+    outline:none;
+    width:100%;
+}
+
+.terms{
+    display:flex;
+    justify-content:skyblue;
+
+}
+
+.submitButton{
+    background-color: aqua;
+    
+}

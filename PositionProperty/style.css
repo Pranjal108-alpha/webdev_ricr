@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
+
+
+
+
+#head{
+    margin: 0%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+
+
+}
+#p{
+
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    position: sticky;
+    
+}
+#help{
+    width: 25px;
+    height: 25px;
+    
+}
