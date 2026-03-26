@@ -77,12 +77,12 @@ body {
 }
 
 
-/* #mainPage {
+ #mainPage {
   width: 65%;
   padding: 25px;
   background: #dbdcec;
  
-} */
+} 
 
 
 #mainPage h2 {
@@ -91,11 +91,11 @@ body {
 }
 
 
-/* #mainPage p {
+ #mainPage p {
   font-size: 13px;
   color: #020000;
   line-height: 1.5;
-} */
+} 
 
 .row {
   display: flex;
