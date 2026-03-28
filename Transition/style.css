@@ -9,15 +9,20 @@
 
 #div1:hover{
     width: 200px;
-    transition: width 3s linear;
+    transition: width 3s linear ;
 
 }
 
-#div2{
+#card{
+    margin: auto;
+    width: 200px;
+    height: 300px;
     border: 1px solid black;
-    width: 10px;
-    height: 20px;
-    overflow: hidden;
-    text-wrap-mode: nowrap;
-    transition: width 3s linear;
+    transition: rotateZ(360deg);
+    transition: transform 2s linear;
+}
+
+#card:hover{
+    transition: rotateZ(360deg);
+    transition: transform 2s linear;
 }

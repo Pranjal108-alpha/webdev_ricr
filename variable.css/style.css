@@ -1,0 +1,17 @@
+*{
+    background-color: rgb(30, 174, 210);
+    margin: 10px;
+    padding: 10px;
+}
+
+
+table{
+    background-color: rgb(60, 125, 230);
+    color: rgb(150, 205, 22);
+    display: flex;
+    margin: 10 px;
+    padding: 10px;
+    border: 1px solid blackl;
+
+    
+}
