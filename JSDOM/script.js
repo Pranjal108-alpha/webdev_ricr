@@ -5,8 +5,8 @@ function submit()
     const fn = document.getElementById("fullname").value;
     console.log(fn);
 
-    document.getElementById("my data").innerText=fn;
+    document.getElementById("myData").innerText=fn;
+     document.getElementById("myData").value="";
     
-     document.getElementById("my data").innerText="";
     
 }
