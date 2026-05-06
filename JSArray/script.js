@@ -1,5 +1,5 @@
-   //CRUD
-let arr=[12,25,45,56,48,93,69];  //create
+//CRUD
+let arr = [12, 25, 45, 56, 48, 93, 69];  //create
 /*
 //read
 for(var i=0;i<7;i++){
@@ -34,7 +34,7 @@ console.log(arr.indexOf(48));
 
 console.log(arr.includes(93));
 
-let unar = [78,65,95,52,23,85,25,86];
+let unar = [78, 65, 95, 52, 23, 85, 25, 86];
 
 console.log(unar);
 
@@ -47,16 +47,14 @@ unar.reverse();
 console.log(unar);
 
 
-let ar = [78,65,95,52,23,85,25,86];
+let ar = [78, 65, 95, 52, 23, 85, 25, 86];
 
-for(var i= 0;i<8 ;i++){
+for (var i = 0; i < 8; i++) {
     console.log(ar[i]);
-    
 }
-
 console.log("for each loop");
-
-ar.forEach((Element)=>{
+ar.forEach((Element) => {
     console.log(Element);
-    
 })
+
+
