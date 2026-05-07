@@ -76,4 +76,8 @@ console.log(arr2.filter((val => val > 4)));
 
 console.log(arr2.slice(0,2));
 
+let str = "This is a srting";
 
+console.log(str.charAt(5));
+
+console.log(str.toUpperCase);
