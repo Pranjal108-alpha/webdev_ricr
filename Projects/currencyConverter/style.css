@@ -1,0 +1,32 @@
+body {
+  background-color: #18c4e7;
+  min-height: 100vh;
+}
+
+.main-heading {
+  background-color: orange;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.flag-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.converter-box {
+  margin-top: 50px;
+}
+
+#result {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
