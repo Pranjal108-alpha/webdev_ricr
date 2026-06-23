@@ -10,10 +10,10 @@ const convertBtn = document.getElementById("convertBtn");
 
 let countryData = [];
 
-// LOAD COUNTRIES
+
 
 async function loadCountries() {
-  const response = await fetch("codes.json");
+  const response = await fetch("sample.json");
 
   const data = await response.json();
 
@@ -22,7 +22,7 @@ async function loadCountries() {
   const uniqueCountries = new Set();
 
   data.forEach((country) => {
-    // SKIP EMPTY OR DUPLICATE
+  
 
     if (!country.Currency_Code || uniqueCountries.has(country.Country)) {
       return;
@@ -30,7 +30,7 @@ async function loadCountries() {
 
     uniqueCountries.add(country.Country);
 
-    // COUNTRY 1 OPTION
+
 
     const option1 = document.createElement("option");
 
@@ -40,7 +40,7 @@ async function loadCountries() {
 
     country1.appendChild(option1);
 
-    // COUNTRY 2 OPTION
+  
 
     const option2 = document.createElement("option");
 
@@ -51,13 +51,13 @@ async function loadCountries() {
     country2.appendChild(option2);
   });
 
-  // DEFAULT VALUES
+
 
   country1.value = "usd,US";
 
   country2.value = "inr,IN";
 
-  // DEFAULT FLAGS
+  
 
   updateFlag(country1, flag1);
 
@@ -66,21 +66,21 @@ async function loadCountries() {
 
 loadCountries();
 
-// UPDATE FLAGS
+
 
 function updateFlag(select, flag) {
   const countryCode = select.value.split(",")[1];
 
   flag.src = `https://flagsapi.com/${countryCode}/flat/64.png`;
 
-  // IF FLAG NOT FOUND
+
 
   flag.onerror = () => {
     flag.src = "https://via.placeholder.com/64";
   };
 }
 
-// FLAG CHANGE EVENTS
+
 
 country1.addEventListener("change", () => {
   updateFlag(country1, flag1);
@@ -90,7 +90,7 @@ country2.addEventListener("change", () => {
   updateFlag(country2, flag2);
 });
 
-// CONVERT CURRENCY
+
 
 async function convertCurrency() {
   errorMessage.innerText = "";
@@ -101,7 +101,7 @@ async function convertCurrency() {
 
   const amount = document.getElementById("orgAmount").value;
 
-  // VALIDATIONS
+
 
   if (!country1.value) {
     errorMessage.innerText = "Please select a From country";
@@ -127,21 +127,21 @@ async function convertCurrency() {
     return;
   }
 
-  // LOADING BUTTON
+ 
 
   convertBtn.innerHTML = `
     <span class="spinner-border spinner-border-sm"></span>
     Loading...
   `;
 
-  // GET CURRENCIES
+
 
   const fromCurrency = country1.value.split(",")[0];
 
   const toCurrency = country2.value.split(",")[0];
 
   try {
-    // API CALL
+  
 
     const response = await fetch(
       `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`,
@@ -150,20 +150,17 @@ async function convertCurrency() {
     const data = await response.json();
     console.log(data);
 
-    // GET RATE
 
     const rate = data[fromCurrency][toCurrency];
 
-    // FINAL AMOUNT
+  
 
     const convertedAmount = amount * rate;
 
-    // SHOW RESULT
 
     document.getElementById("newAmount").innerText =
       `${convertedAmount.toFixed(2)} ${toCurrency.toUpperCase()}`;
 
-    // SHOW EXCHANGE RATE
 
     document.getElementById("exchangeRate").innerText =
       `1 ${fromCurrency.toUpperCase()} = ${rate} ${toCurrency.toUpperCase()}`;
