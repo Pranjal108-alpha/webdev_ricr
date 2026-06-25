@@ -11,8 +11,8 @@ import{
 const routers = express.Router();
 
 routers.post("/login",LoginUser)
-routers.post("/register",LogoutUser)
-routers.get("/logout",RegisterUser)
+routers.post("/register",RegisterUser)
+routers.get("/logout",LogoutUser)
 
 
 
