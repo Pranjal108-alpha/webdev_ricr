@@ -39,6 +39,17 @@ app.delete("/Delete",(req,res)=>{
     res.json({message:"Delete successfull"})
 })
 
+
+//Default Error Handler
+
+app.use((err, req, res, next) => {
+  const ErrMessage = err.message || "Internal Server Error";
+  const ErrStausCode = err.statusCode || 500;
+
+  res.status(ErrStausCode).json({ message: ErrMessage });
+});
+
+
 const port = process.env.PORT || 5000;
 
 app.listen(port,()=>{
